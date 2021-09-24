@@ -1,4 +1,5 @@
 --hey btw it uses alsoo3's template that he gave me,join krystalix : https://discord.gg/bgdhFFFnVs
+--i,FoxIs_Here added more modes cuz its epic right?
 getgenv().Nullware_ReanimateConfiguration = {
 	["Netless"] = true,
 	["Anti-Fling"] = false,
@@ -1676,6 +1677,8 @@ Mouse.KeyDown:Connect(function(k)
 			TauntRemote:FireServer("SolidLC",348832364)
 		elseif songid.Value == "rbxassetid://348832364" then
 			TauntRemote:FireServer("HoneyLC",1143392568)
+		elseif songid.Value == "rbxassetid://1143392568" then
+			TauntRemote:FireServer("None",3247404955)
 		end
 	elseif k == "y" then
 		if taunt.Value ~= "Fave" then
