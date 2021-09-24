@@ -1647,11 +1647,9 @@ Mouse.KeyDown:Connect(function(k)
 		if songid.Value ~= "rbxassetid://3247404955" and songid.Value ~= "rbxassetid://6190635423" and songid.Value ~= "rbxassetid://2371543268" and songid.Value ~= "rbxassetid://5315171837" and songid ~= "rbxassetid://5089636816" and songid.Value ~= "rbxassetid://6768783121" and songid.Value ~= "rbxassetid://4835535512" and songid.Value ~= "rbxassetid://5089636816" and songid.Value ~= "rbxassetid://1280010741" and songid.Value ~= "rbxassetid://5355210927" and songid.Value ~="rbxassetid://2581112923" and songid.Value ~= "rbxassetid://262950484" and songid.Value ~= "rbxassetid://481104377" and songid.Value ~= "rbxassetid://2920078671" and songid.Value ~= "rbxassetid://2297862957" and songid.Value ~= "rbxassetid://1338971957" and songid.Value ~= "rbxassetid://5460732000" and songid.Value ~= "rbxassetid://4557673096" and songid.Value ~= "rbxassetid://348832364" and songid.Value ~= "rbxassetid://1143392568" then
 			TauntRemote:FireServer("None",3247404955)
 		elseif songid.Value == "rbxassetid://3247404955" then
-			TauntRemote:FireServer("None",5315171837)
-		elseif songid.Value == "rbxassetid://5315171837" then
-			TauntRemote:FireServer("Err0r",481104377)
-		elseif songid.Value == "rbxassetid://262950484" then
 			TauntRemote:FireServer("iNSaNiTY",262950484)
+		elseif songid.Value == "rbxassetid://262950484" then
+			TauntRemote:FireServer("Err0r",481104377)
 		elseif songid.Value == "rbxassetid://481104377" then
 			TauntRemote:FireServer("FAST BOIII",2920078671)
 		elseif songid.Value == "rbxassetid://2920078671" then
@@ -1659,10 +1657,6 @@ Mouse.KeyDown:Connect(function(k)
 		elseif songid.Value == "rbxassetid://2297862957" then
 			TauntRemote:FireServer("Chill",1338971957)
 		elseif songid.Value == "rbxassetid://1338971957" then
-			TauntRemote:FireServer("Alastor",5460732000)
-		elseif songid.Value == "rbxassetid://5460732000" then
-			TauntRemote:FireServer("kArmA",4557673096)
-		elseif songid.Value == "rbxassetid://4557673096" then
 			TauntRemote:FireServer("V1",2581112923)
 		elseif songid.Value == "rbxassetid://2581112923" then
 			TauntRemote:FireServer("caverns",5355210927)
@@ -1675,17 +1669,13 @@ Mouse.KeyDown:Connect(function(k)
 		elseif songid.Value == "rbxassetid://4835535512" then
 			TauntRemote:FireServer("Lord",2371543268)
 		elseif songid.Value == "rbxassetid://2371543268" then
-			TauntRemote:FireServer("MaddoxLC",6768783121)
-		elseif songid.Value == "rbxassetid://6768783121" then
 			TauntRemote:FireServer("friday",6190635423)
 		elseif songid.Value == "rbxassetid://6190635423" then
+			TauntRemote:FireServer("MaddoxLC",6768783121)
+		elseif songid.Value == "rbxassetid://6768783121" then
 			TauntRemote:FireServer("SolidLC",348832364)
 		elseif songid.Value == "rbxassetid://348832364" then
 			TauntRemote:FireServer("HoneyLC",1143392568)
-		elseif songid.Value == "rbxassetid://1143392568" then
-			TauntRemote:FireServer("None",3247404955)
-		elseif songid.Value == "rbxassetid://3247404955" then
-			TauntRemote:FireServer("None",5315171837)
 		end
 	elseif k == "y" then
 		if taunt.Value ~= "Fave" then
