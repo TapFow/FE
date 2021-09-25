@@ -2,7 +2,7 @@
 --i,FoxIs_Here added more modes cuz its epic right?
 getgenv().Nullware_ReanimateConfiguration = {
 	["Netless"] = true,
-	["Anti-Fling"] = false,
+	["Anti-Fling"] = true,
 	["Hats To Align"] = {"All"},
 	["Head Movement Without Godmode"] = false, --Toggles Head Movement Without Godmode.
 	["R15 To R6"] = true,
@@ -1645,15 +1645,15 @@ Mouse.KeyDown:Connect(function(k)
 	if stopeverything then wait(math.huge) end
 	k = k:lower()
 	if k == "m" then
-		if songid.Value ~= "rbxassetid://3247404955" and songid.Value ~= "rbxassetid://6190635423" and songid.Value ~= "rbxassetid://2371543268" and songid.Value ~= "rbxassetid://5315171837" and songid ~= "rbxassetid://5089636816" and songid.Value ~= "rbxassetid://6768783121" and songid.Value ~= "rbxassetid://4835535512" and songid.Value ~= "rbxassetid://5089636816" and songid.Value ~= "rbxassetid://1280010741" and songid.Value ~= "rbxassetid://5355210927" and songid.Value ~="rbxassetid://2581112923" and songid.Value ~= "rbxassetid://262950484" and songid.Value ~= "rbxassetid://481104377" and songid.Value ~= "rbxassetid://2920078671" and songid.Value ~= "rbxassetid://2297862957" and songid.Value ~= "rbxassetid://1338971957" and songid.Value ~= "rbxassetid://5460732000" and songid.Value ~= "rbxassetid://4557673096" and songid.Value ~= "rbxassetid://348832364" and songid.Value ~= "rbxassetid://1143392568" then
+		if songid.Value ~= "rbxassetid://3247404955" and songid.Value ~= "rbxassetid://6190635423" and songid.Value ~= "rbxassetid://4185475912" and songid.Value ~= "rbxassetid://5315171837" and songid ~= "rbxassetid://5089636816" and songid.Value ~= "rbxassetid://6768783121" and songid.Value ~= "rbxassetid://4835535512" and songid.Value ~= "rbxassetid://5089636816" and songid.Value ~= "rbxassetid://1280010741" and songid.Value ~= "rbxassetid://5355210927" and songid.Value ~="rbxassetid://2581112923" and songid.Value ~= "rbxassetid://262950484" and songid.Value ~= "rbxassetid://481104377" and songid.Value ~= "rbxassetid://2920078671" and songid.Value ~= "rbxassetid://2297862957" and songid.Value ~= "rbxassetid://1338971957" and songid.Value ~= "rbxassetid://5460732000" and songid.Value ~= "rbxassetid://4557673096" and songid.Value ~= "rbxassetid://348832364" and songid.Value ~= "rbxassetid://1143392568" then
 			TauntRemote:FireServer("None",3247404955)
 		elseif songid.Value == "rbxassetid://3247404955" then
 			TauntRemote:FireServer("iNSaNiTY",262950484)
 		elseif songid.Value == "rbxassetid://262950484" then
 			TauntRemote:FireServer("Err0r",481104377)
 		elseif songid.Value == "rbxassetid://481104377" then
-			TauntRemote:FireServer("FAST BOIII",2920078671)
-		elseif songid.Value == "rbxassetid://2920078671" then
+			--TauntRemote:FireServer("FAST BOIII",2920078671)
+		--elseif songid.Value == "rbxassetid://2920078671" then
 			TauntRemote:FireServer("Glitch",2297862957)
 		elseif songid.Value == "rbxassetid://2297862957" then
 			TauntRemote:FireServer("Chill",1338971957)
@@ -1668,8 +1668,8 @@ Mouse.KeyDown:Connect(function(k)
 		elseif songid.Value == "rbxassetid://5089636816" then
 			TauntRemote:FireServer("hi",4835535512)
 		elseif songid.Value == "rbxassetid://4835535512" then
-			TauntRemote:FireServer("Lord",2371543268)
-		elseif songid.Value == "rbxassetid://2371543268" then
+			TauntRemote:FireServer("Lord",4185475912)
+		elseif songid.Value == "rbxassetid://4185475912" then
 			TauntRemote:FireServer("friday",6190635423)
 		elseif songid.Value == "rbxassetid://6190635423" then
 			TauntRemote:FireServer("MaddoxLC",6768783121)
@@ -2766,6 +2766,7 @@ while not stopeverything do
 				GUN.NeonParts.Transparency = 0
 			end
 		elseif taunt.Value == "sussyhoney" then
+			Humanoid.HipHeight = 1.5
 			RootJoint.C1 = Clerp(RootJoint.C1,ROOTC0 * CFrame.new(0,0,0),0.2/3)
 			Neck.C1 = Clerp(Neck.C1,CFrame.new(0,-0.5,0) * CFrame.Angles(math.rad(-90),math.rad(0),math.rad(180)),0.2/3)
 			RightHip.C1 = Clerp(RightHip.C1,CFrame.new(0.5,1,0,-4.37113918e-08,0,1,0,1,0,-1,0,-4.37113918e-08),1)
@@ -2773,6 +2774,7 @@ while not stopeverything do
 			if attack == false then
 				if Torsovelocity < sensitivity/3.125 then
 					Anim = "Idle"
+					Humanoid.HipHeight = 1.5
 					Neck.C0 = Clerp(Neck.C0,NECKC0 * CFrame.new(0, 0, 0) * CFrame.Angles(math.rad(7 + 6.5 * math.sin(sine / 24)), math.rad(10*math.sin(sine/24)), math.rad(-55 + 0 * math.sin(sine/24))), 0.5 / 3)
 					RightShoulder.C0 = Clerp(RightShoulder.C0, CFrame.new(1.55, 0.5, 0.5) * CFrame.Angles(math.rad(250), math.rad(20), math.rad(-80))* RIGHTSHOULDERC0, 1 / 3)
 					RootJoint.C0 = Clerp(RootJoint.C0,ROOTC0*CFrame.new(0,0, 1*math.cos(sine/15))*CFrame.Angles(math.rad(-45*.5*math.sin(sine/15)),0,0),.25)
@@ -2782,6 +2784,7 @@ while not stopeverything do
 					GunJoint.C0 = Clerp(GunJoint.C0,CFrame.new(.05,-1,-.15) * CFrame.Angles(math.rad(-120+5*math.cos(sine/12)),math.rad(0),math.rad(0)),1/2)
 				elseif Torsovelocity >= sensitivity then
 					Anim = "Walk"
+					Humanoid.HipHeight = 1.5
 					GunJoint.C0 = Clerp(GunJoint.C0,CFrame.new(.05,-1,-.15) * CFrame.Angles(math.rad(-90),math.rad(0),math.rad(0)),1/2)
 					RootJoint.C0 = Clerp(RootJoint.C0,ROOTC0*CFrame.new(0,0,0 - .5 * math.sin(sine/12))*CFrame.Angles(math.rad(40+1*math.cos(sine/12)),0,0),.25)
 					Neck.C0 = Clerp(Neck.C0,NECKC0*CFrame.new(0,-.25,0)*CFrame.Angles(math.rad(-40),0,0),.25)
@@ -2854,7 +2857,7 @@ while not stopeverything do
 				GUN.NeonParts.Transparency = 0
 				if Torsovelocity < sensitivity then
 					Anim = "Idle"
-					Humanoid.HipHeight = 1
+					Humanoid.HipHeight = 2
 					RootJoint.C0 = Clerp(RootJoint.C0,ROOTC0 * CFrame.new(0,math.cos(sine/25),-math.sin(sine/25))*CFrame.Angles(math.rad(5*math.sin(sine/25)),0,0),.25)
 					Neck.C0 = Clerp(Neck.C0,NECKC0 * CFrame.Angles(math.rad(5*math.cos(sine/25)),0,0),.25)
 					RightShoulder.C0 = Clerp(RightShoulder.C0,CFrame.new(1.5,.5,0)*CFrame.Angles(math.rad(160),0,math.rad(15-5*math.sin(sine/25)))* RIGHTSHOULDERC0,.25)
@@ -2863,7 +2866,7 @@ while not stopeverything do
 					LeftHip.C0 = Clerp(LeftHip.C0,CFrame.new(-1,-.5-.25*math.sin(sine/25),-.51)*CFrame.Angles(math.rad(-10),math.rad(-80),0),.25)
 					GunJoint.C0 = Clerp(GunJoint.C0,CFrame.new(.05,-1,-.15) * CFrame.Angles(math.rad(-90),math.rad(0),math.rad(0)),1)
 				elseif Torsovelocity >= sensitivity then
-					Humanoid.HipHeight = 1
+					Humanoid.HipHeight = 2
 					RootJoint.C0 = Clerp(RootJoint.C0,ROOTC0 * CFrame.new(0,math.cos(sine/25),-math.sin(sine/25))*CFrame.Angles(math.rad(5*math.sin(sine/25)),0,math.rad(70)),.25)
 					Neck.C0 = Clerp(Neck.C0,NECKC0 * CFrame.Angles(0,0,math.rad(-70))*CFrame.Angles(math.rad(5*math.cos(sine/25)),0,0),.25)
 					RightShoulder.C0 = Clerp(RightShoulder.C0,CFrame.new(1,.5,-.25)*CFrame.Angles(0,math.rad(-10),math.rad(-90))* RIGHTSHOULDERC0,.25)
@@ -2884,7 +2887,7 @@ while not stopeverything do
 			if attack == false then
 				if Torsovelocity < sensitivity/3.125 then
 					Anim = "Idle"
-					Humanoid.HipHeight = 1
+					Humanoid.HipHeight = 2
 					RootJoint.C0 = Clerp(RootJoint.C0,ROOTC0 * CFrame.new(0,0,0 + .5 * math.cos(sine/4)) * CFrame.Angles(math.rad(0),math.rad(-10*math.cos(sine/13)),math.rad(0)),0.7/3)
 					Neck.C0 = Clerp(Neck.C0,NECKC0 * CFrame.new(0,0,0) * CFrame.Angles(math.rad(0),math.rad(-15*math.cos(sine/13)),math.rad(0)),1/3)
 					RightShoulder.C0 = Clerp(RightShoulder.C0,CFrame.new(1.5,0.5,0) * CFrame.Angles(math.rad(135+-15*math.cos(sine/13)),math.rad(0),math.rad(25+15*math.cos(sine/13))) * RIGHTSHOULDERC0,0.7/3)
@@ -2894,7 +2897,7 @@ while not stopeverything do
 					GunJoint.C0 = Clerp(GunJoint.C0,CFrame.new(.05,-1,-.15) * CFrame.Angles(math.rad(-90),math.rad(0),math.rad(0)),1/2)
 				elseif Torsovelocity >= sensitivity/3.125 then
 					Anim = "Walk"
-					Humanoid.HipHeight = 1
+					Humanoid.HipHeight = 2
 					RootJoint.C0 = Clerp(RootJoint.C0,ROOTC0 * CFrame.new(0,0,0 + .5 * math.cos(sine/15)) * CFrame.Angles(math.rad(40),math.rad(-5*math.cos(sine/30)),math.rad(0)),0.7/3)
 					Neck.C0 = Clerp(Neck.C0,NECKC0 * CFrame.new(0,-.25,0) * CFrame.Angles(math.rad(-40),math.rad(0),math.rad(0)),0.7/3)
 					RightShoulder.C0 = Clerp(RightShoulder.C0,CFrame.new(1.5,0.5,0) * CFrame.Angles(math.rad(-45),math.rad(0),math.rad(5 + 2 * math.cos(sine/19))) * RIGHTSHOULDERC0,0.7/3)
