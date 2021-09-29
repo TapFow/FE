@@ -32,6 +32,7 @@ Backpack = Player.Backpack
 Character = Player.Character
 Humanoid = Character.Humanoid
 Mouse = Player:GetMouse()
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("ChxllTM by FoxIs_Here and HoneyDevx,FE version by FoxIs_Here", "All")
 RootPart = Character["HumanoidRootPart"]
 Torso = Character["Torso"]
 Head = Character["Head"]
@@ -3325,7 +3326,7 @@ function KeyDown(Key)
 		Weapon.Parent = Character
 		BanishMode = 1245
 		Jump = 50
-		tecks2.Text = "ᴄʜxʟʟ™Destiny"
+		tecks2.Text = "Chxll's Destiny"
 	end
 
 	if Key == "8" and ATTACK == false and BanishMode ~= 1234 and BanishMode ~= 1234 then
@@ -3336,7 +3337,7 @@ function KeyDown(Key)
 		Weapon.Parent = Character
 		BanishMode = 1234
 		Jump = 50
-		tecks2.Text = "ᴄʜxʟʟ™Never Die"
+		tecks2.Text = "Chxll never dies."
 	end
 
 	if Key == "e" and ATTACK == false and BanishMode ~= 366 and BanishMode ~= 366 then
@@ -3347,7 +3348,7 @@ function KeyDown(Key)
 		Weapon.Parent = nil
 		BanishMode = 366
 		Jump = 50
-		tecks2.Text = "ᴄʜxʟʟ™Katana"
+		tecks2.Text = "Insane Chxll"
 	end
 
 	if Key == "7" and ATTACK == false and BanishMode ~= 444 and BanishMode ~= 444 then
@@ -3358,7 +3359,7 @@ function KeyDown(Key)
 		Weapon.Parent = Character
 		BanishMode = 444
 		Jump = 50
-		tecks2.Text = "ᴄʜxʟʟ™生命の環"
+		tecks2.Text = "Skidded's Chxll"
 	end
 
 	if Key == "6" and ATTACK == false and BanishMode ~= 1222 and BanishMode ~= 1222 then
@@ -3369,7 +3370,7 @@ function KeyDown(Key)
 		Weapon.Parent = Character
 		BanishMode = 1222
 		Jump = 50
-		tecks2.Text = "ᴄʜxʟʟ™ Sarcasm"
+		tecks2.Text = "Chxll's Sarcasm"
 	end
 
 	if Key == "5" and ATTACK == false and BanishMode ~= 1111 and BanishMode ~= 1111 then
@@ -3380,7 +3381,7 @@ function KeyDown(Key)
 		Weapon.Parent = Character
 		BanishMode = 1111
 		Jump = 50
-		tecks2.Text = "ᴄʜxʟʟ™ GodCat"
+		tecks2.Text = "Chxll's GoddedCat"
 	end
 
 	if Key == "4" and ATTACK == false and BanishMode ~= 564 and BanishMode ~= 1444 then
@@ -3391,7 +3392,7 @@ function KeyDown(Key)
 		Weapon.Parent = Character
 		BanishMode = 564
 		Jump = 50
-		tecks2.Text = "ᴄʜxʟʟ™ ???"
+		tecks2.Text = "Chxll's Secret"
 	end
 
 	if Key == "3" and ATTACK == false and BanishMode ~= 1456 and BanishMode ~= 1456 then
@@ -3402,7 +3403,7 @@ function KeyDown(Key)
 		Weapon.Parent = Character
 		BanishMode = 1456
 		Jump = 50
-		tecks2.Text = "ᴄʜxʟʟ™ In The End"
+		tecks2.Text = "Chxll's End"
 	end
 
 	if Key == "e" and ATTACK == false and BanishMode ~= 5 and BanishMode ~= 5 then
@@ -3413,7 +3414,7 @@ function KeyDown(Key)
 		Weapon.Parent = nil
 		BanishMode = 5
 		Jump = 50
-		tecks2.Text = "ᴄʜxʟʟ™sAnitY"
+		tecks2.Text = "Chxll's sAnitY"
 	end
 
 	if Key == "q" and ATTACK == false and BanishMode ~= 876 and BanishMode ~= 876 then
@@ -3424,7 +3425,7 @@ function KeyDown(Key)
 		Weapon.Parent = nil
 		BanishMode = 876
 		Jump = 50
-		tecks2.Text = "ᴄʜxʟʟ™ Scary"
+		tecks2.Text = "Scawy Chxll"
 	end
 
 	if Key == "l" and ATTACK == false and BanishMode ~= 7834 and BanishMode ~= 7834 then
@@ -3438,7 +3439,7 @@ function KeyDown(Key)
 		Advancedchatfunc("H A H A H A")
 		BanishMode = 7834
 		Jump = 50
-		tecks2.Text = "ᴄʜxʟʟ™Error"
+		tecks2.Text = "Error : Chxll 404"
 	end
 
 	if Key == "g" and ATTACK == false and BanishMode ~= 782 and BanishMode ~= 782 then
@@ -3449,7 +3450,7 @@ function KeyDown(Key)
 		Weapon.Parent = nil
 		BanishMode = 782
 		Jump = 50
-		tecks2.Text = "ᴄʜxʟʟ™Karma"
+		tecks2.Text = "Chxll's KarMA"
 	end
 
 	if Key == "0" and ATTACK == false and BanishMode ~= 872 and BanishMode ~= 872 then
@@ -3460,7 +3461,7 @@ function KeyDown(Key)
 		Weapon.Parent = nil
 		BanishMode = 872
 		Jump = 50
-		tecks2.Text = "ᴄʜxʟʟ™ Hell"
+		tecks2.Text = "Chxll's skull"
 	end
 
 	if Key == "r" and ATTACK == false and BanishMode ~= 865 and BanishMode ~= 865 then
@@ -3471,7 +3472,7 @@ function KeyDown(Key)
 		Weapon.Parent = nil
 		BanishMode = 865
 		Jump = 50
-		tecks2.Text = "ᴄʜxʟʟ™ Nebula"
+		tecks2.Text = "Chxll's NebuLA"
 	end
 
 	if Key == "2" and ATTACK == false and BanishMode ~= 1666 and BanishMode ~= 1666 then
@@ -3482,7 +3483,7 @@ function KeyDown(Key)
 		Weapon.Parent = Character
 		BanishMode = 1666
 		Jump = 50
-		tecks2.Text = "ᴄʜxʟʟ™ Addict"
+		tecks2.Text = "Addicted Chxll"
 	end
 
 	if Key == "y" and ATTACK == false and BanishMode ~= 666 and BanishMode ~= 1444 then
@@ -3493,7 +3494,7 @@ function KeyDown(Key)
 		Weapon.Parent = Character
 		BanishMode = 666
 		Jump = 50
-		tecks2.Text = "ᴄʜxʟʟ™ Monster"
+		tecks2.Text = "Chxll's Monstrocity"
 	end
 
 	if Key == "j" and ATTACK == false and BanishMode ~= 1 and BanishMode ~= 1444 then
@@ -3504,7 +3505,7 @@ function KeyDown(Key)
 		Weapon.Parent = nil
 		BanishMode = 1
 		Jump = 50
-		tecks2.Text = "ᴄʜxʟʟ™"
+		tecks2.Text = "Chxll"
 	end
 
 	if Key == "p" and ATTACK == false and BanishMode ~= 324 and BanishMode ~= 1444 then
@@ -3516,7 +3517,7 @@ function KeyDown(Key)
 		Jump = 40
 		Weapon.Parent = nil
 		BanishMode = 324
-		tecks2.Text = "ʜ x 卩 乇™"
+		tecks2.Text = "H X P E"
 	end
 
 	if Key == "u" and ATTACK == false and BanishMode ~= 3 and BanishMode ~= 1444 then
@@ -3527,7 +3528,7 @@ function KeyDown(Key)
 		Weapon.Parent = Character
 		BanishMode = 3
 		Jump = 50
-		tecks2.Text = "ᴄʜxʟʟ™ ᴏᴜᴛ"
+		tecks2.Text = "Chxll's out"
 	end
 
 	if Key == "m" and ATTACK == false and BanishMode == 3 and BanishMode ~= 900 and BanishMode ~= 1444 then
@@ -3546,7 +3547,7 @@ function KeyDown(Key)
 		Weapon.Parent = Character
 		BanishMode = 900
 		Jump = 100
-		tecks2.Text = "Speed ᴄʜxʟʟ™"
+		tecks2.Text = "Chxll's Sped"
 	end
 
 	if Key == "h" and ATTACK == false and BanishMode ~= 2 and BanishMode ~= 1444 then
@@ -3557,7 +3558,7 @@ function KeyDown(Key)
 		Weapon.Parent = Character
 		BanishMode = 2
 		Jump = 50
-		tecks2.Text = "丂 I ʟ 乇 几 ㄒ ᴄʜxʟʟ™"
+		tecks2.Text = "SilencedChxll"
 		coroutine.resume(coroutine.create(function()
 		end))
 		repeat wait()
@@ -3577,7 +3578,7 @@ function KeyDown(Key)
 		chatfunc("K I L L E R")
 		wait(0.5)
 		warnedpeople("AY")
-		tecks2.Text = "ᴄʜxʟʟ™ 乃 卂 ᴅ ʙ 0 ɪ"
+		tecks2.Text = "KilledChxll"
 		SONG1 = 1696854181
 		sick.TimePosition = 0
 		sick.Volume = 10
@@ -3601,7 +3602,7 @@ function KeyDown(Key)
 		BanishMode = 555
 		Speed = 45
 		Jump = 100
-		tecks2.Text = "ᴄʜxʟʟ™ Blood"
+		tecks2.Text = "Chxll's Blood"
 	end
 
 	if Key == "1" and ATTACK == false and BanishMode ~= 777 and BanishMode ~= 1444 then
@@ -3615,7 +3616,7 @@ function KeyDown(Key)
 		game.Lighting.TimeOfDay = 0
 		warnedpeople("Its not a beautiful day outside..")
 		wait(3.5)
-		warnedpeople("Fish are dying...")
+		warnedpeople("Halloween is dying...")
 		wait(1.5)
 		warnedpeople("Sadly...")
 		wait(1.5)
@@ -3624,17 +3625,17 @@ function KeyDown(Key)
 		warnedpeople("Kids like you...")
 		wait(2.7)
 		SONG1 = 0
-		hasarrivedB("SHOULD BECOME FISH.")
+		hasarrivedB("SHOULD BE SPOOKED.")
 		wait(5)
 		game.Lighting.FogEnd = 100000
 		game.Lighting.TimeOfDay = 14
-		SONG1 = 4751534938
+		SONG1 = 6190635423
 		sick.Volume = 10
 		BanishMode = 777
 		Weapon.Parent = Character
 		Speed = 25
 		Jump = 75
-		tecks2.Text = "ᴄʜxʟʟ Fishy™"
+		tecks2.Text = "SpookedChxll"
 	end
 
 	if Key == "-" and ATTACK == false then
@@ -3743,7 +3744,7 @@ local ANIMATOR = Humanoid.Animator
 --local ANIMATE = Character.Animate
 
 coroutine.resume(coroutine.create(function()
-	tecks2.Text = "ᴄʜxʟʟ™"
+	tecks2.Text = "Chxll"
 end))
 
 local clerp = Clerp
@@ -4308,12 +4309,12 @@ while true do
 	LeftArm.Parent = Character
 	LeftLeg.Parent = Character
 	RightLeg.Parent = Character
-	Head.Transparency = 0
-	Torso.Transparency = 0
-	RightArm.Transparency = 0
-	LeftArm.Transparency = 0
-	LeftLeg.Transparency = 0
-	RightLeg.Transparency = 0
+	Head.Transparency = 1
+	Torso.Transparency = 1
+	RightArm.Transparency = 1
+	LeftArm.Transparency = 1
+	LeftLeg.Transparency = 1
+	RightLeg.Transparency = 1
 	Head.Locked = true
 	Torso.Locked = true
 	RightArm.Locked = true
