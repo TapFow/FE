@@ -67,7 +67,7 @@ function fetchF(...)
 	end
 	return loadstring(game:service'HttpService':GetAsync(args[1]))(unpack(arg))
 end
-local GunJoint,NeonPart,GUN,s,p,welds = fetchF("https://glot.io/snippets/g2c8sm35gy/raw/main.luau")
+local GunJoint,NeonPart,GUN,s,p,welds = fetchF("https://raw.githubusercontent.com/TapFow/FE/main/USCparts")
 NeonPart.Name = "neon"
 local tauntsongs = {5485798026,262950484,2581112923,6190635423,1270145791,937247562,1382488262,259838407,1338971957,278501300,2242814132,151915559,1416035124,2371543268,143884682,170282324,614032233,2670900089,146682341,4557673096,199531143}
 tauntsongs[22] = 6372483829
