@@ -1840,36 +1840,6 @@ FRL.MeshId,FRL.Scale = "rbxasset://fonts/rightleg.mesh",Vector3.new(PlayerSize,P
 FLL.MeshId,FLL.Scale = "rbxasset://fonts/leftleg.mesh",Vector3.new(PlayerSize,PlayerSize,PlayerSize)
 --><All Attack Functions
 
-function Kill(dude)
-	coroutine.resume(coroutine.create(function()
-		if dude and dude ~= Character then
-			local h = dude:FindFirstChildOfClass("Humanoid")
-			local t = dude:FindFirstChild("Torso") or dude:FindFirstChild("UpperTorso") or dude:FindFirstChild("HumanoidRootPart")
-			local deathp = Instance.new("Part",Effects) deathp.Anchored = true deathp.Size = Vector3.new() deathp.Transparency = 1 deathp.CanCollide = false deathp.CFrame = t.CFrame
-			coroutine.wrap(function()
-				deathp:Destroy()
-			end)
-			if h then
-				if dude then
-					for i,v in next, dude:children() do if v:IsA"LocalScript" or v:IsA"Script" or v:IsA"ModuleScript" then v.Disabled = true wait() v:destroy() end end
-					CreateSound(206082273, deathp, 5, .75)
-					ShakeCam(1,10)
-					if h then h.MaxHealth = 0 h.Health = 0 end
-					for _, c in pairs(dude:GetChildren()) do if c:IsA("BasePart") then c:BreakJoints() c:Destroy() end end
-					dude:BreakJoints()
-					dude:Destroy()
-					for i = 0, math.random(3,7) do
-						WACKYEFFECT({Time = math.random(145,165), EffectType = "Sphere", Size = Vector3.new(10,10,10), Size2 = Vector3.new(5,80,5), Transparency = 0, Transparency2 = 1, CFrame = deathp.CFrame*CFrame.Angles(math.rad(math.random(0,360)),math.rad(math.random(0,360)),math.rad(math.random(0,360))), MoveToPos = nil, RotationX = nil, RotationY = nil, RotationZ = nil, Material = "Neon", Color = Color3.new(1,0,0), SoundID = nil, SoundPitch = nil, SoundVolume = nil, UseBoomerangMath = true, Boomerang = 0, SizeBoomerang = 35})
-					end
-					WACKYEFFECT({Time = math.random(72,82), EffectType = "Sphere", Size = Vector3.new(10,10,10), Size2 = Vector3.new(40,40,40), Transparency = 0.6, Transparency2 = 1, CFrame = deathp.CFrame, MoveToPos = nil, RotationX = nil, RotationY = nil, RotationZ = nil, Material = "Neon", Color = Color3.new(1,0,0), SoundID = nil, SoundPitch = nil, SoundVolume = nil, UseBoomerangMath = true, Boomerang = 0, SizeBoomerang = 35})
-					for i = 0, math.random(5,9) do
-						WACKYEFFECT({Time = math.random(36,41), EffectType = "Sphere", Size = Vector3.new(18,18,18), Size2 = Vector3.new(6,6,6), Transparency = 0, Transparency2 = 1, CFrame = deathp.CFrame, MoveToPos = deathp.CFrame*CFrame.new(math.random(-95,95),math.random(-95,95),math.random(-95,95)).p, RotationX = nil, RotationY = nil, RotationZ = nil, Material = "Neon", Color = Color3.new(1,0,0), SoundID = nil, SoundPitch = nil, SoundVolume = nil, UseBoomerangMath = true, Boomerang = 45, SizeBoomerang = 40})
-					end
-				end
-			end
-		end
-	end))
-end
 
 function ApplyAoE(POSITION,RANGE)
 	for index, CHILD in pairs(workspace:GetDescendants()) do
@@ -1879,7 +1849,7 @@ function ApplyAoE(POSITION,RANGE)
 				local TORSO = CHILD:FindFirstChild("Torso") or CHILD:FindFirstChild("UpperTorso")
 				if TORSO then
 					if (TORSO.Position - POSITION).Magnitude <= RANGE then
-						Kill(CHILD)
+						--Kill(CHILD)
 					end
 				end
 			end
@@ -2053,7 +2023,7 @@ function Grab()
 			RootPart.CFrame = TORS.CFrame * CF(0,0,2)
 			CreateSound("260411131", TORS, 10, 1)
 			TORS.Anchored = false
-			Kill(HITBODY)
+			--Kill(HITBODY)
 			ATTACK = false
 			Rooted = false
 			RootPart.Anchored = false
@@ -2330,7 +2300,7 @@ function WyvernWingrage()
 					if TORSO then
 						local HUM = BODIES[E]:FindFirstChildOfClass("Humanoid")
 						if HUM then
-							HUM.Health = HUM.Health - 0.3
+							--HUM.Health = HUM.Health - 0.3
 						end
 					end
 				end
@@ -2529,7 +2499,7 @@ function ChaoticWyvernOutburst()
 					table.insert(VELOCITIES,GRAV)
 					local HUM = BODIES[E]:FindFirstChildOfClass("Humanoid")
 					if HUM then
-						HUM.Health = HUM.Health / 2
+						--HUM.Health = HUM.Health / 2
 					end
 				end
 			end
@@ -2624,7 +2594,7 @@ function ChaoticWyvernOutburst()
 						if TORSO then
 							local HUM = BODIES[E]:FindFirstChildOfClass("Humanoid")
 							if HUM then
-								HUM.Health = HUM.Health / 2
+								--HUM.Health = HUM.Health / 2
 							end
 						end
 					end
@@ -3032,9 +3002,9 @@ coroutine.wrap(function()
 					if TORSO then
 						if (TORSO.Position - RootPart.Position ).Magnitude <= 10 then
 							if CHILD:FindFirstChildWhichIsA("Humanoid") then
-								CHILD:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10)
+								CHILD:FindFirstChildWhichIsA("Humanoid"):TakeDamage(0)
 								if CHILD:FindFirstChildWhichIsA("Humanoid").Health <=0 then
-									Kill(CHILD)
+									--Kill(CHILD)
 								end
 							end
 							Lightning(RootPart.Position,TORSO.Position,15,0.25,BrickColor.new("Really black"),math.random(15,35),0.5,0.5,0,true,55) Lightning(RootPart.Position,TORSO.Position,15,0.25,BrickColor.new("Really red"),math.random(15,35),0.5,0.5,0,true,55)
