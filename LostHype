@@ -2922,7 +2922,7 @@ end
 function KeyDown(Key)
 	KEYHOLD = true
 	if Key == "q" and ATTACK == false then
-		--Warp()
+		Warp()
 	end
 	if Key == "z" and ATTACK == false   then
 		--HandBeam()
