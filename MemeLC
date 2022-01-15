@@ -1776,7 +1776,7 @@ end
 local tv=taunt.Value
 Mouse.Button1Down:Connect(function()
 	if stopeverything then wait(math.huge) end
-	if not attack and (taunt.Value ~= "Fave" and taunt.Value ~= "Krump" and taunt.Value ~= "OOOOO" and taunt.Value ~= "nulled" and taunt.Value ~= "uwu" and taunt.Value ~= "hell") then
+	if not attack and (taunt.Value ~= "Fave" and tv ~= "Memer" and tv ~= "Sit" and taunt.Value ~= "Krump" and taunt.Value ~= "OOOOO" and taunt.Value ~= "nulled" and taunt.Value ~= "uwu" and taunt.Value ~= "hell") then
 		attackone()
 	end
 end)
@@ -1841,6 +1841,18 @@ Mouse.KeyDown:Connect(function(k)
 	elseif k == "y" then
 		if taunt.Value ~= "Fave" then
 			TauntRemote:FireServer("Fave",290182215)
+		else
+			TauntRemote:FireServer("None",3247404955)
+		end
+	elseif k == "r" then
+		if taunt.Value ~= "Sit" then
+			TauntRemote:FireServer("Sit",5563485991)
+		else
+			TauntRemote:FireServer("None",3247404955)
+		end
+	elseif k == "g" then
+		if taunt.Value ~= "Memer" then
+			TauntRemote:FireServer("Memer",5599930438)
 		else
 			TauntRemote:FireServer("None",3247404955)
 		end
@@ -3499,6 +3511,24 @@ while not stopeverything do
 				LeftHip.C0 = Clerp(LeftHip.C0,CFrame.new(-.5,-1.25,-.25) * CFrame.Angles(math.rad(0),math.rad(0),math.rad(10)),1)
 				RightHip.C1 = Clerp(RightHip.C1,CFrame.new(),1)
 				LeftHip.C1 = Clerp(LeftHip.C1,CFrame.new(),1)
+				GunJoint.C0 = Clerp(GunJoint.C0,CFrame.new(0,-1,0) * CFrame.Angles(math.rad(-90),math.rad(0),math.rad(0)),1)
+			elseif taunt.Value == "Memer" then
+				RootJoint.C0 = Clerp(RootJoint.C0,rc0 * CFrame.new(0 , 0 , 0) * CFrame.Angles(math.rad(math.random(-9000,9000)), math.rad(math.random(-9000,9000)), math.rad(math.random(-9000,9000))),1)
+				Neck.C0 = Clerp(Neck.C0,nc0 * CFrame.new() * CFrame.Angles(math.rad(0),math.rad(0),math.rad(0)),1)
+				RightShoulder.C0 = Clerp(RightShoulder.C0, CFrame.new(1.5, 0.5, 0) * CFrame.Angles(math.rad(90), math.rad(0), math.rad(90)) * rscp,1)
+				LeftShoulder.C0 = Clerp(LeftShoulder.C0, CFrame.new(-1.5, 0.5, 0) * CFrame.Angles(math.rad(90), math.rad(0), math.rad(-90)) * lscp,1)
+				RightHip.C0 = Clerp(RightHip.C0, CFrame.new(1, -1, -0.01) * CFrame.Angles(math.rad(0), math.rad(90), math.rad(0)) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(0)),1)
+				LeftHip.C0 = Clerp(LeftHip.C0,CFrame.new(-1, -1, -0.01) * CFrame.Angles(math.rad(0), math.rad(-90), math.rad(0)) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(0)),1)
+				RightHip.C1 = Clerp(RightHip.C1,CFrame.new() * CFrame.Angles(math.rad(0),math.rad(0),math.rad(0)),1)
+				LeftHip.C1 = Clerp(LeftHip.C1,CFrame.new() * CFrame.Angles(math.rad(0),math.rad(0),math.rad(0)),1)
+				GunJoint.C0 = Clerp(GunJoint.C0,CFrame.new(0,-1,0) * CFrame.Angles(math.rad(-90),math.rad(0),math.rad(0)),1)
+			elseif taunt.Value == "Sit" then
+				RootJoint.C0 = Clerp(RootJoint.C0,ROOTC0 * CFrame.new(0, 0, -1.70) * CFrame.Angles(math.rad(-40), math.rad(0), math.rad(0)),0.5)
+				Neck.C0 = Clerp(Neck.C0, NECKC0 * CFrame.new(0, 0, 0) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(0)),0.5)
+				RightShoulder.C0 = Clerp(RightShoulder.C0, CFrame.new(1.5, 0.3, 0.10) * CFrame.Angles(math.rad(-40), math.rad(0), math.rad(0)) * RIGHTSHOULDERC0,0.5)
+				LeftShoulder.C0 = Clerp(LeftShoulder.C0, CFrame.new(-1.5, 0.3, 0.10) * CFrame.Angles(math.rad(-40), math.rad(0), math.rad(0)) * LEFTSHOULDERC0,0.15)
+				RightHip.C0 = Clerp(RightHip.C0, CFrame.new(1, -1, 0) * CFrame.Angles(math.rad(45), math.rad(90), math.rad(0)) * CFrame.Angles(math.rad(-8), math.rad(0), math.rad(0)),0.5)
+				LeftHip.C0 = Clerp(LeftHip.C0, CFrame.new(-1, -1, 0) * CFrame.Angles(math.rad(45), math.rad(-90), math.rad(0)) * CFrame.Angles(math.rad(-8), math.rad(0), math.rad(0)),0.5)
 				GunJoint.C0 = Clerp(GunJoint.C0,CFrame.new(0,-1,0) * CFrame.Angles(math.rad(-90),math.rad(0),math.rad(0)),1)
 			elseif taunt.Value == "nulled" then			
 				change = 1
