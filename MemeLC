@@ -919,7 +919,7 @@ coroutine.resume(coroutine.create(function()
 		end
 	end
 end))
-
+--[[
 function WACKYEFFECT(Table)
 	local TYPE = (Table.EffectType or "Sphere")
 	local SIZE = (Table.Size or Vector3.new(1,1,1))
@@ -1018,6 +1018,7 @@ function WACKYEFFECT(Table)
 		end
 	end))
 end
+
 function Ka_Boom()
 	attack = true
 	walkspeed = 0
@@ -1124,63 +1125,6 @@ function Ka_Boom()
 	BEAM:Destroy()
 	attack = false
 	walkspeed = 50
-end
-
-function attackone()
-	attack = true
-	walkspeed = 16
-	AttackGyro()
-	for i = 0,0.5,0.05 do
-		swait()
-		RootJoint.C0 = Clerp(RootJoint.C0,ROOTC0 * CFrame.new(0 + .5 * math.cos(sine/50),0,3 - .5 * math.sin(sine/50)) * CFrame.Angles(math.rad(0),math.rad(0),math.rad(30)),0.7/3)
-		Neck.C0 = Clerp(Neck.C0,nc0 * CFrame.new() * CFrame.Angles(math.rad(15),math.rad(0),math.rad(-30)),1/3)
-		RightShoulder.C0 = Clerp(RightShoulder.C0,CFrame.new(1.5,0.5,0) * CFrame.Angles(math.rad(90),math.rad(0),math.rad(30)) * rscp,1/3)
-		LeftShoulder.C0 = Clerp(LeftShoulder.C0,CFrame.new(-1.5,0.5,0) * CFrame.Angles(math.rad(30),math.rad(0),math.rad(0)) * lscp,1/3)
-		RightHip.C0 = Clerp(RightHip.C0,CFrame.new(1,-0.5,-0.5) * CFrame.Angles(math.rad(-15 + 9 * math.cos(sine/74)),math.rad(80),math.rad(0)) * CFrame.Angles(math.rad(0 + 5 * math.cos(sine/37)),math.rad(0),math.rad(0)),0.7/3)
-		LeftHip.C0 = Clerp(LeftHip.C0,CFrame.new(-1,-1,0) * CFrame.Angles(math.rad(-15 - 9 * math.cos(sine/54)),math.rad(-80),math.rad(0)) * CFrame.Angles(math.rad(0 - 5 * math.cos(sine/41)),math.rad(0),math.rad(0)),0.7/3)
-		GunJoint.C0 = Clerp(GunJoint.C0,CFrame.new(0.05,-1,-0.15) * CFrame.Angles(math.rad(-90),math.rad(0),math.rad(0)),1/2)
-	end
-	Effect({Time = 25,EffectType = "Box",Size = Vector3.new(),Size2 = Vector3.new(3,3,3),Transparency = 0,Transparency2 = 1,CFrame = Holetwo.CFrame,MoveToPos = nil,RotationX = math.random(-1,1),RotationY = math.random(-1,1),RotationZ = math.random(-1,1),Material = "Neon",Color = Color3.new(1,0,0),SoundID = 642890855,SoundPitch = 0.45,SoundVolume = 6,UseBoomerangMath = true,Boomerang = 0,SizeBoomerang = 50})
-	Effect({Time = 25,EffectType = "Box",Size = Vector3.new(),Size2 = Vector3.new(3,3,3),Transparency = 0,Transparency2 = 1,CFrame = Holetwo.CFrame,MoveToPos = nil,RotationX = math.random(-1,1),RotationY = math.random(-1,1),RotationZ = math.random(-1,1),Material = "Neon",Color = shade,SoundID = nil,SoundPitch = nil,SoundVolume = nil,UseBoomerangMath = true,Boomerang = 0,SizeBoomerang = 50})
-	local DISTANCE = (Holetwo.Position - Mouse.Hit.p).Magnitude
-	local killbeam = CreatePart(3,Effects,"Neon",0,0,shade,"Kill Beam",Vector3.new(1,DISTANCE,1))
-	killbeam.CFrame = CFrame.new(Holetwo.Position,Mouse.Hit.p) * CFrame.new(0,0,-DISTANCE/2) * CFrame.Angles(math.rad(90),math.rad(0),math.rad(0))
-	MakeForm(killbeam,"Cyl")
-	coroutine.resume(coroutine.create(function()
-		for i = 1,25 do
-			swait()
-			killbeam.Transparency = i/25
-		end
-		killbeam:Destroy()
-	end))
-	Lightning(Holetwo.Position,Mouse.Hit.p,15,3.5,Color3.new(0,0,1),25,0,1,0,true,55)
-	Lightning(Holetwo.Position,Mouse.Hit.p,15,3.5,Color3.new(0,0,1),25,0,1,0,true,55)
-	Lightning(Holetwo.Position,Mouse.Hit.p,15,3.5,Color3.new(0,0,1),25,0,1,0,true,55)
-	Lightning(Holetwo.Position,Mouse.Hit.p,15,3.5,Color3.new(0,0,1),25,0,1,0,true,55)
-	Lightning(Holetwo.Position,Mouse.Hit.p,15,3.5,Color3.new(0,0,1),25,0,1,0,true,55)
-	for i = 0,2 do
-		Effect({Time = math.random(25,50),EffectType = "Round Slash",Size = Vector3.new(),Size2 = Vector3.new(.1,0,.1),Transparency = 0,Transparency2 = 1,CFrame = Holetwo.CFrame*CFrame.Angles(math.rad(math.random(0,360)),math.rad(math.random(0,360)),math.rad(math.random(0,360))),MoveToPos = nil,RotationX = math.random(-1,1),RotationY = math.random(-1,1),RotationZ = math.random(-1,1),Material = "Neon",Color = Color3.new(1,0,0),SoundID = nil,SoundPitch = nil,SoundVolume = nil,UseBoomerangMath = true,Boomerang = 0,SizeBoomerang = 15})
-		Effect({Time = math.random(25,50),EffectType = "Round Slash",Size = Vector3.new(),Size2 = Vector3.new(.1,0,.1),Transparency = 0,Transparency2 = 1,CFrame = Holetwo.CFrame*CFrame.Angles(math.rad(math.random(0,360)),math.rad(math.random(0,360)),math.rad(math.random(0,360))),MoveToPos = nil,RotationX = math.random(-1,1),RotationY = math.random(-1,1),RotationZ = math.random(-1,1),Material = "Neon",Color = shade,SoundID = nil,SoundPitch = nil,SoundVolume = nil,UseBoomerangMath = true,Boomerang = 0,SizeBoomerang = 15})
-	end
-	Effect({Time = 25,EffectType = "Box",Size = Vector3.new(),Size2 = Vector3.new(3,3,3),Transparency = 0,Transparency2 = 1,CFrame = Mouse.Hit,MoveToPos = nil,RotationX = math.random(-1,1),RotationY = math.random(-1,1),RotationZ = math.random(-1,1),Material = "Neon",Color = Color3.new(1,0,0),SoundID = 192410089,SoundPitch = .55,SoundVolume = 8,UseBoomerangMath = true,Boomerang = 0,SizeBoomerang = 50})
-	Effect({Time = 25,EffectType = "Box",Size = Vector3.new(),Size2 = Vector3.new(3,3,3),Transparency = 0,Transparency2 = 1,CFrame = Mouse.Hit,MoveToPos = nil,RotationX = math.random(-1,1),RotationY = math.random(-1,1),RotationZ = math.random(-1,1),Material = "Neon",Color = shade,SoundID = nil,SoundPitch = nil,SoundVolume = nil,UseBoomerangMath = true,Boomerang = 0,SizeBoomerang = 50})
-	for i = 0,2 do
-		Effect({Time = math.random(25,50),EffectType = "Round Slash",Size = Vector3.new(),Size2 = Vector3.new(.1,0,.1),Transparency = 0,Transparency2 = 1,CFrame = Mouse.Hit*CFrame.Angles(math.rad(math.random(0,360)),math.rad(math.random(0,360)),math.rad(math.random(0,360))),MoveToPos = nil,RotationX = math.random(-1,1),RotationY = math.random(-1,1),RotationZ = math.random(-1,1),Material = "Neon",Color = Color3.new(1,0,0),SoundID = nil,SoundPitch = nil,SoundVolume = nil,UseBoomerangMath = true,Boomerang = 0,SizeBoomerang = 15})
-		Effect({Time = math.random(25,50),EffectType = "Round Slash",Size = Vector3.new(),Size2 = Vector3.new(.1,0,.1),Transparency = 0,Transparency2 = 1,CFrame = Mouse.Hit*CFrame.Angles(math.rad(math.random(0,360)),math.rad(math.random(0,360)),math.rad(math.random(0,360))),MoveToPos = nil,RotationX = math.random(-1,1),RotationY = math.random(-1,1),RotationZ = math.random(-1,1),Material = "Neon",Color = shade,SoundID = nil,SoundPitch = nil,SoundVolume = nil,UseBoomerangMath = true,Boomerang = 0,SizeBoomerang = 15})
-	end
-	mdmg(Mouse.Hit.p,10)
-	for i = 0,0.5,0.075 do
-		swait()
-		RootJoint.C0 = Clerp(RootJoint.C0,ROOTC0 * CFrame.new(0 + .5 * math.cos(sine/50),0,3 - .5 * math.sin(sine/50)) * CFrame.Angles(math.rad(0),math.rad(0),math.rad(30)),0.7/3)
-		Neck.C0 = Clerp(Neck.C0,nc0 * CFrame.new() * CFrame.Angles(math.rad(10),math.rad(0),math.rad(-60)),1/3)
-		RightShoulder.C0 = Clerp(RightShoulder.C0,CFrame.new(1.5,0.5,0) * CFrame.Angles(math.rad(160),math.rad(-20),math.rad(60)) * rscp,1/3)
-		LeftShoulder.C0 = Clerp(LeftShoulder.C0,CFrame.new(-1.5,0.5,0) * CFrame.Angles(math.rad(40),math.rad(5),math.rad(5)) * lscp,1/3)
-		RightHip.C0 = Clerp(RightHip.C0,CFrame.new(1,-0.5,-0.5) * CFrame.Angles(math.rad(-15 + 9 * math.cos(sine/74)),math.rad(80),math.rad(0)) * CFrame.Angles(math.rad(0 + 5 * math.cos(sine/37)),math.rad(0),math.rad(0)),0.7/3)
-		LeftHip.C0 = Clerp(LeftHip.C0,CFrame.new(-1,-1,0) * CFrame.Angles(math.rad(-15 - 9 * math.cos(sine/54)),math.rad(-80),math.rad(0)) * CFrame.Angles(math.rad(0 - 5 * math.cos(sine/41)),math.rad(0),math.rad(0)),0.7/3)
-		GunJoint.C0 = Clerp(GunJoint.C0,CFrame.new(0.05,-1,-0.15) * CFrame.Angles(math.rad(-90),math.rad(0),math.rad(0)),1/2)
-	end
-	walkspeed = 50
-	attack = false
 end
 
 function attacktwo()
@@ -1478,6 +1422,35 @@ function SingularityBeam()
 	Swait(30)
 	chargeball:Destroy()
 	killbeam:Destroy()
+	walkspeed = 50
+	attack = false
+end
+--]]
+
+function attackone()
+	attack = true
+	walkspeed = 16
+	AttackGyro()
+	for i = 0,.5,.05 do
+		swait()
+		RootJoint.C0 = Clerp(RootJoint.C0,ROOTC0 * CFrame.new(0 + .5 * math.cos(sine/50),0,0 - .5 * math.sin(sine/50)) * CFrame.Angles(math.rad(0),math.rad(0),math.rad(30)),.7/3)
+		Neck.C0 = Clerp(Neck.C0,nc0 * CFrame.new() * CFrame.Angles(math.rad(15),math.rad(0),math.rad(-30)),1/3)
+		RightShoulder.C0 = Clerp(RightShoulder.C0,CFrame.new(1.5,.5,0) * CFrame.Angles(math.rad(90),math.rad(0),math.rad(30)) * rscp,1/3)
+		LeftShoulder.C0 = Clerp(LeftShoulder.C0,CFrame.new(-1.5,.5,0) * CFrame.Angles(math.rad(30),math.rad(0),math.rad(0)) * lscp,1/3)
+		RightHip.C0 = Clerp(RightHip.C0,CFrame.new(1,-.5,-.5) * CFrame.Angles(math.rad(-15 + 9 * math.cos(sine/74)),math.rad(80),math.rad(0)) * CFrame.Angles(math.rad(0 + 5 * math.cos(sine/37)),math.rad(0),math.rad(0)),.7/3)
+		LeftHip.C0 = Clerp(LeftHip.C0,CFrame.new(-1,-1,0) * CFrame.Angles(math.rad(-15 - 9 * math.cos(sine/54)),math.rad(-80),math.rad(0)) * CFrame.Angles(math.rad(0 - 5 * math.cos(sine/41)),math.rad(0),math.rad(0)),.7/3)
+		GunJoint.C0 = Clerp(GunJoint.C0,CFrame.new(.05,-1,-.15) * CFrame.Angles(math.rad(-90),math.rad(0),math.rad(0)),1/2)
+	end
+	for i = 0,.5,.075 do
+		swait()
+		RootJoint.C0 = Clerp(RootJoint.C0,ROOTC0 * CFrame.new(0 + .5 * math.cos(sine/50),0,0 - .5 * math.sin(sine/50)) * CFrame.Angles(math.rad(0),math.rad(0),math.rad(30)),.7/3)
+		Neck.C0 = Clerp(Neck.C0,nc0 * CFrame.new() * CFrame.Angles(math.rad(10),math.rad(0),math.rad(-60)),1/3)
+		RightShoulder.C0 = Clerp(RightShoulder.C0,CFrame.new(1.5,.5,0) * CFrame.Angles(math.rad(160),math.rad(-20),math.rad(60)) * rscp,1/3)
+		LeftShoulder.C0 = Clerp(LeftShoulder.C0,CFrame.new(-1.5,.5,0) * CFrame.Angles(math.rad(40),math.rad(5),math.rad(5)) * lscp,1/3)
+		RightHip.C0 = Clerp(RightHip.C0,CFrame.new(1,-.5,-.5) * CFrame.Angles(math.rad(-15 + 9 * math.cos(sine/74)),math.rad(80),math.rad(0)) * CFrame.Angles(math.rad(0 + 5 * math.cos(sine/37)),math.rad(0),math.rad(0)),.7/3)
+		LeftHip.C0 = Clerp(LeftHip.C0,CFrame.new(-1,-1,0) * CFrame.Angles(math.rad(-15 - 9 * math.cos(sine/54)),math.rad(-80),math.rad(0)) * CFrame.Angles(math.rad(0 - 5 * math.cos(sine/41)),math.rad(0),math.rad(0)),.7/3)
+		GunJoint.C0 = Clerp(GunJoint.C0,CFrame.new(.05,-1,-.15) * CFrame.Angles(math.rad(-90),math.rad(0),math.rad(0)),1/2)
+	end
 	walkspeed = 50
 	attack = false
 end
@@ -1800,6 +1773,13 @@ function slash(bonuspeed,rotspeed,rotatingop,typeofshape,type,typeoftrans,pos,sc
 		rng:Destroy()
 	end))
 end
+local tv=taunt.Value
+Mouse.Button1Down:Connect(function()
+	if stopeverything then wait(math.huge) end
+	if not attack and (taunt.Value ~= "Fave" and taunt.Value ~= "Krump" and taunt.Value ~= "OOOOO" and taunt.Value ~= "nulled" and taunt.Value ~= "uwu" and taunt.Value ~= "hell") then
+		attackone()
+	end
+end)
 
 Mouse.KeyDown:Connect(function(k)
 	if stopeverything then wait(math.huge) end
@@ -1848,13 +1828,13 @@ Mouse.KeyDown:Connect(function(k)
 		elseif songid.Value == "rbxassetid://556122490" then
 			TauntRemote:FireServer("purple",5177243035)
 		elseif songid.Value == "rbxassetid://5177243035" then
-			TauntRemote:FireServer("addict",5368276808)-----------
+			TauntRemote:FireServer("addict",5368276808)
 		elseif songid.Value == "rbxassetid://5368276808" then
-			TauntRemote:FireServer("omg",6323766331)---------------
+			TauntRemote:FireServer("omg",6323766331)
 		elseif songid.Value == "rbxassetid://6323766331" then
-			TauntRemote:FireServer("hell",5310699007)----------
+			TauntRemote:FireServer("hell",5310699007)
 		elseif songid.Value == "rbxassetid://5310699007" then
-			TauntRemote:FireServer("corrupt",5805753966)--------
+			TauntRemote:FireServer("corrupt",5805753966)
 		elseif songid.Value == "rbxassetid://5805753966" then
 			TauntRemote:FireServer("None",3247404955)
 		end
@@ -2597,17 +2577,6 @@ while not stopeverything do
 					LeftHip.C0 = Clerp(LeftHip.C0,CFrame.new(-1,-1,-.01) * CFrame.Angles(math.rad(0),math.rad(-80),math.rad(-5-5*math.sin(sine/9))),1/2)
 					GunJoint.C0 = Clerp(GunJoint.C0,CFrame.new(.05,-1,-.15) * CFrame.Angles(math.rad(-90),math.rad(0),math.rad(0)),1)
 				end
-				local partnum = math.random(1,48)
-				coroutine.resume(coroutine.create(function()
-					local wingpart = Character.Wings:GetChildren()[partnum]
-					wingpart.Color = GUN.NeonParts.Color
-					wingpart.WingTrail.Color = ColorSequence.new(wingpart.Color)
-					swait()
-					if not alreadyfixing then
-						wingpart.Color = shade
-						wingpart.WingTrail.Color = ColorSequence.new(shade)
-					end
-				end))
 			end
 		elseif taunt.Value == "Err0r" then
 			RootJoint.C1 = Clerp(RootJoint.C1,ROOTC0 * CFrame.new(0,0,0),0.2/3)
@@ -2634,17 +2603,6 @@ while not stopeverything do
 					LeftHip.C0 = Clerp(LeftHip.C0,CFrame.new(-1,-1,0) * CFrame.Angles(math.rad(-20 - 9 * math.cos(sine/54)),math.rad(-80),math.rad(0)) * CFrame.Angles(math.rad(0 - 5 * math.cos(sine/41)),math.rad(0),math.rad(0)),0.7/3)
 					GunJoint.C0 = Clerp(GunJoint.C0,CFrame.new(0.05,-1,-0.15) * CFrame.Angles(math.rad(-90),math.rad(0),math.rad(0)),1/2)
 				end
-				local partnum = math.random(1,48)
-				coroutine.resume(coroutine.create(function()
-					local wingpart = Character.Wings:GetChildren()[partnum]
-					wingpart.Color = Color3.new(0,1,0)
-					wingpart.WingTrail.Color = ColorSequence.new(Color3.new(0,1,0))
-					swait()
-					if not alreadyfixing then
-						wingpart.Color = shade
-						wingpart.WingTrail.Color = ColorSequence.new(shade)
-					end
-				end))
 				GUN.Base.Transparency = 0
 				GUN.GunAdditions.Transparency = 0
 				GUN.NeonParts.Transparency = 0
@@ -2704,17 +2662,6 @@ while not stopeverything do
 					LeftHip.C0 = Clerp(LeftHip.C0,CFrame.new(-1,-1,-0.01) * CFrame.Angles(math.rad(0),math.rad(-80),math.rad(-5-5*math.sin(sine/9))),1/2)
 					GunJoint.C0 = Clerp(GunJoint.C0,CFrame.new(.05,-1,-.15) * CFrame.Angles(math.rad(-90),math.rad(0),math.rad(0)),1/2)
 				end
-				local partnum = math.random(1,48)
-				coroutine.resume(coroutine.create(function()
-					local wingpart = Character.Wings:GetChildren()[partnum]
-					wingpart.Color = GUN.NeonParts.Color
-					wingpart.WingTrail.Color = ColorSequence.new(wingpart.Color)
-					swait()
-					if not alreadyfixing then
-						wingpart.Color = shade
-						wingpart.WingTrail.Color = ColorSequence.new(shade)
-					end
-				end))
 				GUN.Base.Transparency = 0
 				GUN.GunAdditions.Transparency = 0
 				GUN.NeonParts.Transparency = 0
@@ -2806,6 +2753,7 @@ while not stopeverything do
 			if not attack then
 				if Torsovelocity < sensitivity then
 					Anim = "Idle"
+					Humanoid.HipHeight = 1.5
 					local headsnap = math.random(1,60);
 					local headsnapping=false;
 					if headsnap == 1 then
@@ -2820,6 +2768,7 @@ while not stopeverything do
 					GunJoint.C0 = Clerp(GunJoint.C0,CFrame.new(.05,-1,-.15) * CFrame.Angles(math.rad(-106.3-.9*math.cos(sine/12)),math.rad(0),math.rad(0)),1 / 2)
 				elseif Torsovelocity >= sensitivity then
 					Anim = "Walk"
+					Humanoid.HipHeight = 1.5
 					local headsnap = math.random(1,60);
 					local headsnapping=false;
 					if headsnap == 1 then
@@ -2836,17 +2785,6 @@ while not stopeverything do
 				GUN.Base.Transparency = 0
 				GUN.GunAdditions.Transparency = 0
 				GUN.NeonParts.Transparency = 0
-				local partnum = math.random(1,48)
-				coroutine.resume(coroutine.create(function()
-					local wingpart = Character.Wings:GetChildren()[partnum]
-					wingpart.Color = Color3.fromRGB(math.random(0,255),255,255)
-					wingpart.WingTrail.Color = ColorSequence.new(wingpart.Color)
-					swait()
-					if not alreadyfixing then
-						wingpart.Color = shade
-						wingpart.WingTrail.Color = ColorSequence.new(shade)
-					end
-				end))
 			end
 		elseif taunt.Value == "uwu" then
 			RootJoint.C1 = Clerp(RootJoint.C1,ROOTC0 * CFrame.new(0,0,0),0.2/3)
@@ -2885,6 +2823,7 @@ while not stopeverything do
 			if attack == false then
 				if Torsovelocity < sensitivity/3.125 then
 					Anim = "Idle"
+					Humanoid.HipHeight = 1.5
 					RootJoint.C0 = Clerp(RootJoint.C0,ROOTC0 * CFrame.new(0 , 0 , 0 - .5 * math.sin(sine/25)) * CFrame.Angles(math.rad(20), math.rad(0), math.rad(0)), 0.8 / 3)
 					Neck.C0 = Clerp(Neck.C0, NECKC0 * CFrame.new(0, 0, 0) * CFrame.Angles(math.rad(math.random(0.25,3)), math.rad(math.random(0.25,3)), math.rad(math.random(0.25,3))), .7 / 3)
 					RightShoulder.C0 = Clerp(RightShoulder.C0, CFrame.new(1.5, 0.5, 0) * CFrame.Angles(math.rad(140 + 5 * math.cos(SINE /32)), math.rad(0), math.rad(0)) * RIGHTSHOULDERC0, 0.8 / 10)
@@ -2894,6 +2833,7 @@ while not stopeverything do
 					GunJoint.C0 = Clerp(GunJoint.C0,CFrame.new(.05,-1,-.15) * CFrame.Angles(math.rad(-90),math.rad(0),math.rad(0)),1/2)
 				elseif Torsovelocity >= sensitivity/3.125 then
 					Anim = "Walk"
+					Humanoid.HipHeight = 1.5
 					RootJoint.C0 = Clerp(RootJoint.C0,ROOTC0 * CFrame.new(0 - 0.15 * math.cos(sine / 47), -0.5, 0.5 + 0.1 * math.cos(sine / 28)) * CFrame.Angles(math.rad(70), math.rad(0 - RootPart.RotVelocity.Y), math.rad(0 - RootPart.RotVelocity.Y * 4.5 + 3 * math.cos(sine / 47))), .2 / 3)
 					Neck.C0 = Clerp(Neck.C0, NECKC0 * CFrame.new(0, 0, 0 + ((1) - 1)) * CFrame.Angles(math.rad(-17 - 5 * math.cos(sine / 52)), math.rad(0 - 3 * math.cos(sine / 37)), math.rad(0 + 2 * math.cos(sine / 78))), .2 / 3)
 					RightShoulder.C0 = Clerp(RightShoulder.C0, CFrame.new(1.5, 0.5 + 0.05 * math.cos(sine / 28), 0) * CFrame.Angles(math.rad(-8 - 4 * math.cos(sine / 59)), math.rad(-20 + 7 * math.cos(sine / 62)), math.rad(20 + 5 * math.cos(sine / 50)))* RIGHTSHOULDERC0, .2 / 3)
@@ -2905,17 +2845,6 @@ while not stopeverything do
 				GUN.Base.Transparency = 0
 				GUN.GunAdditions.Transparency = 0
 				GUN.NeonParts.Transparency = 0
-				local partnum = math.random(1,48)
-				coroutine.resume(coroutine.create(function()
-					local wingpart = Character.Wings:GetChildren()[partnum]
-					wingpart.Color = Color3.fromRGB(math.random(0,255),255,255)
-					wingpart.WingTrail.Color = ColorSequence.new(wingpart.Color)
-					swait()
-					if not alreadyfixing then
-						wingpart.Color = shade
-						wingpart.WingTrail.Color = ColorSequence.new(shade)
-					end
-				end))
 			end
 		elseif taunt.Value == "purple" then
 			RootJoint.C1 = Clerp(RootJoint.C1,ROOTC0,.2/3)
@@ -2933,6 +2862,7 @@ while not stopeverything do
 						RightShoulder.C0 = Clerp(RightShoulder.C0, CFrame.new(1.5, 0.5 + 0.05 * math.sin(sine / 12), 0) * CFrame.Angles(math.rad(math.random(-90-eee.PlaybackLoudness/7,90+eee.PlaybackLoudness/7)), math.rad(math.random(-30-eee.PlaybackLoudness/7,30+eee.PlaybackLoudness/7)), math.rad(math.random(-50-eee.PlaybackLoudness/7,50+eee.PlaybackLoudness/7)))* RIGHTSHOULDERC0,1/2)
 						LeftShoulder.C0 = Clerp(LeftShoulder.C0, CFrame.new(-1.5, 0.5 + 0.05 * math.sin(sine / 12), 0) * CFrame.Angles(math.rad(math.random(-10000-eee.PlaybackLoudness/7,10000+eee.PlaybackLoudness/7)), math.rad(math.random(-900-eee.PlaybackLoudness/7,900+eee.PlaybackLoudness/7)), math.rad(math.random(-20-eee.PlaybackLoudness/7,20+eee.PlaybackLoudness/7)))* LEFTSHOULDERC0,1/2)
 					end
+					Humanoid.HipHeight = 1.5
 					RootJoint.C0 = Clerp(RootJoint.C0,ROOTC0 * CFrame.new(0, 0, 1.5 + 1 * math.cos(sine / 39)) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(10)),0.8)
 					Neck.C0 = Clerp(Neck.C0, NECKC0 * CFrame.new(0, 0, 0 + ((1) - 1)) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(0)),1/2)
 					RightShoulder.C0 = Clerp(RightShoulder.C0, CFrame.new(1.5, 0.5, 0) * CFrame.Angles(math.rad(-41.6-4*math.sin(sine/25)), math.rad(math.random(-0.25,3)), math.rad(math.random(0.25,3)))* RIGHTSHOULDERC0, .7 / 3)
@@ -2942,6 +2872,7 @@ while not stopeverything do
 					GunJoint.C0 = Clerp(GunJoint.C0,CFrame.new(.05,-1,-.15) * CFrame.Angles(math.rad(-106.3-.9*math.cos(sine/12)),math.rad(0),math.rad(0)),1 / 2)
 				elseif Torsovelocity >= sensitivity then
 					Anim = "Walk"
+					Humanoid.HipHeight = 1.5
 					RootJoint.C0 = Clerp(RootJoint.C0,ROOTC0 * CFrame.new(0 - 0.15 * math.cos(sine / 47), -0.5, 0.5 + 0.1 * math.cos(sine / 28)) * CFrame.Angles(math.rad(70), math.rad(0 - RootPart.RotVelocity.Y), math.rad(0 - RootPart.RotVelocity.Y * 4.5 + 3 * math.cos(sine / 47))), .2 / 3)
 					Neck.C0 = Clerp(Neck.C0, NECKC0 * CFrame.new(0, 0, 0 + ((1) - 1)) * CFrame.Angles(math.rad(-17 - 5 * math.cos(sine / 52)), math.rad(0 - 3 * math.cos(sine / 37)), math.rad(0 + 2 * math.cos(sine / 78))), .2 / 3)
 					RightShoulder.C0 = Clerp(RightShoulder.C0, CFrame.new(1.5, 0.5 + 0.05 * math.cos(sine / 28), 0) * CFrame.Angles(math.rad(-8 - 4 * math.cos(sine / 59)), math.rad(-20 + 7 * math.cos(sine / 62)), math.rad(20 + 5 * math.cos(sine / 50)))* RIGHTSHOULDERC0, .2 / 3)
@@ -2953,17 +2884,6 @@ while not stopeverything do
 				GUN.Base.Transparency = 0
 				GUN.GunAdditions.Transparency = 0
 				GUN.NeonParts.Transparency = 0
-				local partnum = math.random(1,48)
-				coroutine.resume(coroutine.create(function()
-					local wingpart = Character.Wings:GetChildren()[partnum]
-					wingpart.Color = Color3.new(eee.PlaybackLoudness/500,0,0)
-					wingpart.WingTrail.Color = ColorSequence.new(wingpart.Color)
-					swait()
-					if not alreadyfixing then
-						wingpart.Color = shade
-						wingpart.WingTrail.Color = ColorSequence.new(shade)
-					end
-				end))
 			end
 		elseif taunt.Value == "addict" then
 			RootJoint.C1 = Clerp(RootJoint.C1,ROOTC0,.2/3)
@@ -2978,6 +2898,7 @@ while not stopeverything do
 						RightShoulder.C0 = Clerp(RightShoulder.C0, CFrame.new(1.5, 0.5 + 0.05 * math.sin(sine / 12), 0) * CFrame.Angles(math.rad(math.random(-90-eee.PlaybackLoudness/7,90+eee.PlaybackLoudness/7)), math.rad(math.random(-30-eee.PlaybackLoudness/7,30+eee.PlaybackLoudness/7)), math.rad(math.random(-50-eee.PlaybackLoudness/7,50+eee.PlaybackLoudness/7)))* RIGHTSHOULDERC0,1/2)
 						LeftShoulder.C0 = Clerp(LeftShoulder.C0, CFrame.new(-1.5, 0.5 + 0.05 * math.sin(sine / 12), 0) * CFrame.Angles(math.rad(math.random(-10000-eee.PlaybackLoudness/7,10000+eee.PlaybackLoudness/7)), math.rad(math.random(-900-eee.PlaybackLoudness/7,900+eee.PlaybackLoudness/7)), math.rad(math.random(-20-eee.PlaybackLoudness/7,20+eee.PlaybackLoudness/7)))* LEFTSHOULDERC0,1/2)
 					end
+					Humanoid.HipHeight = 1.5
 					RootJoint.C0 = Clerp(RootJoint.C0,ROOTC0 * CFrame.new(0, 0, 1.5 + 1 * math.cos(sine / 39)) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(10)),0.8)
 					Neck.C0 = Clerp(Neck.C0, NECKC0 * CFrame.new(0, 0, 0 + ((1) - 1)) * CFrame.Angles(math.rad(15 - 2.5 * math.sin(SINE / 12)), math.rad(math.random(-25,25)), math.rad(0)),0.15)
 					RightShoulder.C0 = Clerp(RightShoulder.C0, CFrame.new(1.5, 0.5 + 0.05 * math.sin(sine / 12), 0) * CFrame.Angles(math.rad(100 + 2 * math.cos(sine / 12)), math.rad(0), math.rad(15 + 3 * math.cos(sine / 12) - 3 *  math.sin(sine / 12))) *               CFrame.Angles(math.rad(0), math.rad(0), math.rad(0)) * RIGHTSHOULDERC0,1/2)
@@ -2987,6 +2908,7 @@ while not stopeverything do
 					GunJoint.C0 = Clerp(GunJoint.C0,CFrame.new(.05,-1,-.15) * CFrame.Angles(math.rad(-106.3-.9*math.cos(sine/12)),math.rad(0),math.rad(0)),1 / 2)
 				elseif Torsovelocity >= sensitivity then
 					Anim = "Walk"
+					Humanoid.HipHeight = 1.5
 					RootJoint.C0 = Clerp(RootJoint.C0,ROOTC0 * CFrame.new(0 - 0.15 * math.cos(sine / 47), -0.5, 0.5 + 0.1 * math.cos(sine / 28)) * CFrame.Angles(math.rad(70), math.rad(0 - RootPart.RotVelocity.Y), math.rad(0 - RootPart.RotVelocity.Y * 4.5 + 3 * math.cos(sine / 47))), .2 / 3)
 					Neck.C0 = Clerp(Neck.C0, NECKC0 * CFrame.new(0, 0, 0 + ((1) - 1)) * CFrame.Angles(math.rad(-17 - 5 * math.cos(sine / 52)), math.rad(0 - 3 * math.cos(sine / 37)), math.rad(0 + 2 * math.cos(sine / 78))), .2 / 3)
 					RightShoulder.C0 = Clerp(RightShoulder.C0, CFrame.new(1.5, 0.5, 0) * CFrame.Angles(math.rad(-41.6-4*math.sin(sine/25)), math.rad(math.random(-0.25,3)), math.rad(math.random(0.25,3)))* RIGHTSHOULDERC0, .7 / 3)
@@ -3043,6 +2965,7 @@ while not stopeverything do
 			LeftShoulder.C1 = Clerp(LeftShoulder.C1,CFrame.new(.5,.499975681,0,0,0,-1,0,1,0,1,0,0),1)
 			if not attack then
 				if Torsovelocity < sensitivity then
+					Humanoid.HipHeight = 2.5
 					RootJoint.C0 = Clerp(RootJoint.C0,ROOTC0 * CFrame.new(0,0,3 - .5 * math.sin(sine/50)) * CFrame.Angles(math.rad(50 + 4 * math.sin(sine/100)),math.rad(0),math.rad(0)),0.7/3)
 					Neck.C0 = Clerp(Neck.C0,NECKC0 * CFrame.new(0,0,0) * CFrame.Angles(math.rad(20),math.rad(10*math.cos(sine/100)),math.rad(0)),1)
 					if math.random(1,60) == 1 then
@@ -3055,6 +2978,7 @@ while not stopeverything do
 					GunJoint.C0 = Clerp(GunJoint.C0,CFrame.new(.05,-1,-.15) * CFrame.Angles(math.rad(-106.3-.9*math.cos(sine/12)),math.rad(0),math.rad(0)),1 / 2)
 				elseif Torsovelocity >= sensitivity then
 					Anim = "Walk"
+					Humanoid.HipHeight = 2.5
 					RootJoint.C0 = Clerp(RootJoint.C0,ROOTC0 * CFrame.new(0 - 0.15 * math.cos(sine / 47), -0.5, 0.5 + 0.1 * math.cos(sine / 28)) * CFrame.Angles(math.rad(70), math.rad(0 - RootPart.RotVelocity.Y), math.rad(0 - RootPart.RotVelocity.Y * 4.5 + 3 * math.cos(sine / 47))), .2 / 3)
 					Neck.C0 = Clerp(Neck.C0, NECKC0 * CFrame.new(0, 0, 0 + ((1) - 1)) * CFrame.Angles(math.rad(-17 - 5 * math.cos(sine / 52)), math.rad(0 - 3 * math.cos(sine / 37)), math.rad(0 + 2 * math.cos(sine / 78))), .2 / 3)
 					RightShoulder.C0 = Clerp(RightShoulder.C0, CFrame.new(1.5, 0.5 + 0.05 * math.cos(sine / 28), 0) * CFrame.Angles(math.rad(-8 - 4 * math.cos(sine / 59)), math.rad(-20 + 7 * math.cos(sine / 62)), math.rad(20 + 5 * math.cos(sine / 50)))* RIGHTSHOULDERC0, .2 / 3)
@@ -3066,17 +2990,6 @@ while not stopeverything do
 				GUN.Base.Transparency = 1
 				GUN.GunAdditions.Transparency = 1
 				GUN.NeonParts.Transparency = 1
-				local partnum = math.random(1,48)
-				coroutine.resume(coroutine.create(function()
-					local wingpart = Character.Wings:GetChildren()[partnum]
-					wingpart.Color = Color3.new(eee.PlaybackLoudness/500,0,0)
-					wingpart.WingTrail.Color = ColorSequence.new(wingpart.Color)
-					swait()
-					if not alreadyfixing then
-						wingpart.Color = shade
-						wingpart.WingTrail.Color = ColorSequence.new(shade)
-					end
-				end))
 			end
 		elseif taunt.Value == "corrupt" then
 			RootJoint.C1 = Clerp(RootJoint.C1,ROOTC0,.2/3)
@@ -3088,6 +3001,7 @@ while not stopeverything do
 			if not attack then
 				if Torsovelocity < sensitivity then
 					Anim = "Idle"
+					Humanoid.HipHeight = 2
 					local headsnap = math.random(1,60);
 					local headsnapping=false;
 					if headsnap == 1 then
@@ -3105,6 +3019,7 @@ while not stopeverything do
 					GunJoint.C0 = Clerp(GunJoint.C0,CFrame.new(.05,-1,-.15) * CFrame.Angles(math.rad(-90),math.rad(0),math.rad(0)),1/2)
 				elseif Torsovelocity >= sensitivity then
 					Anim = "Walk"
+					Humanoid.HipHeight = 2
 					local headsnap = math.random(1,60);
 					local headsnapping=false;
 					if headsnap == 1 then
@@ -3124,17 +3039,6 @@ while not stopeverything do
 				GUN.Base.Transparency = 0
 				GUN.GunAdditions.Transparency = 0
 				GUN.NeonParts.Transparency = 0
-				local partnum = math.random(1,48)
-				coroutine.resume(coroutine.create(function()
-					local wingpart = Character.Wings:GetChildren()[partnum]
-					wingpart.Color = Color3.fromRGB(0+170*eee.PlaybackLoudness/1000,0,0+170*eee.PlaybackLoudness/1000)
-					wingpart.WingTrail.Color = ColorSequence.new(wingpart.Color)
-					swait()
-					if not alreadyfixing then
-						wingpart.Color = shade
-						wingpart.WingTrail.Color = ColorSequence.new(shade)
-					end
-				end))
 			end
 		elseif taunt.Value == "sis" then
 			RootJoint.C1 = Clerp(RootJoint.C1,ROOTC0 * CFrame.new(0,0,0),0.2/3)
@@ -3164,17 +3068,6 @@ while not stopeverything do
 				GUN.Base.Transparency = 0
 				GUN.GunAdditions.Transparency = 0
 				GUN.NeonParts.Transparency = 0
-				local partnum = math.random(1,48)
-				coroutine.resume(coroutine.create(function()
-					local wingpart = Character.Wings:GetChildren()[partnum]
-					wingpart.Color = Color3.fromRGB(math.random(0,255),255,255)
-					wingpart.WingTrail.Color = ColorSequence.new(wingpart.Color)
-					swait()
-					if not alreadyfixing then
-						wingpart.Color = shade
-						wingpart.WingTrail.Color = ColorSequence.new(shade)
-					end
-				end))
 			end
 		elseif taunt.Value == "V1" then
 			RootJoint.C1 = Clerp(RootJoint.C1,ROOTC0,.2/3)
@@ -3513,17 +3406,6 @@ while not stopeverything do
 				GUN.Base.Transparency = 0
 				GUN.GunAdditions.Transparency = 0
 				GUN.NeonParts.Transparency = 0
-				local partnum = math.random(1,48)
-				coroutine.resume(coroutine.create(function()
-					local wingpart = Character.Wings:GetChildren()[partnum]
-					wingpart.Color = BrickColor.Random().Color
-					wingpart.WingTrail.Color = ColorSequence.new(wingpart.Color)
-					swait()
-					if not alreadyfixing then
-						wingpart.Color = shade
-						wingpart.WingTrail.Color = ColorSequence.new(shade)
-					end
-				end))
 			end
 		elseif taunt.Value == "FAST BOIII" then
 			if not Character:FindFirstChild("WalkingWheel") and Anim == "Idle" and attack == false then
