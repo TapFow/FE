@@ -52,7 +52,7 @@ Bypass = "Death"
 plr = game.Players.LocalPlayer
 dead = false
 char = plr.Character
-
+local sinezreal = 5
 
 local SINE = 0
 bullet = workspace[plr.Name]["HumanoidRootPart"]
@@ -184,6 +184,7 @@ Cos = math.cos
 Sin = math.sin
 Abs = math.abs
 Rad = math.rad
+Animation_Speed = 3
 local function randomstring()
 	local length = MRANDOM(10,20)
 	local array = {}
@@ -1780,16 +1781,17 @@ Mouse.Button1Down:Connect(function()
 		attackone()
 	end
 end)
-
 Mouse.KeyDown:Connect(function(k)
 	if stopeverything then wait(math.huge) end
 	k = k:lower()
 	if k == "m" then
-		if songid.Value ~= "rbxassetid://3247404955" and songid.Value ~= "rbxassetid://5805753966" and songid.Value ~= "rbxassetid://5310699007" and songid.Value ~= "rbxassetid://6323766331" and songid.Value ~= "rbxassetid://5368276808" and songid.Value ~= "rbxassetid://5177243035" and songid.Value ~= "rbxassetid://556122490" and songid.Value ~= "rbxassetid://6431602336" and songid.Value ~= "rbxassetid://5703266925" and songid.Value ~= "rbxassetid://5106599506" and songid.Value ~= "rbxassetid://6190635423" and songid.Value ~= "rbxassetid://4185475912" and songid.Value ~= "rbxassetid://5315171837" and songid ~= "rbxassetid://5089636816" and songid.Value ~= "rbxassetid://6768783121" and songid.Value ~= "rbxassetid://4835535512" and songid.Value ~= "rbxassetid://5089636816" and songid.Value ~= "rbxassetid://1280010741" and songid.Value ~= "rbxassetid://5355210927" and songid.Value ~="rbxassetid://2581112923" and songid.Value ~= "rbxassetid://262950484" and songid.Value ~= "rbxassetid://481104377" and songid.Value ~= "rbxassetid://2920078671" and songid.Value ~= "rbxassetid://2297862957" and songid.Value ~= "rbxassetid://1338971957" and songid.Value ~= "rbxassetid://5460732000" and songid.Value ~= "rbxassetid://4557673096" and songid.Value ~= "rbxassetid://348832364" and songid.Value ~= "rbxassetid://1143392568" then
+		if songid.Value ~= "rbxassetid://3247404955" and songid.Value ~= "rbxassetid://6049110238" and songid.Value ~= "rbxassetid://5805753966" and songid.Value ~= "rbxassetid://5310699007" and songid.Value ~= "rbxassetid://6323766331" and songid.Value ~= "rbxassetid://5368276808" and songid.Value ~= "rbxassetid://5177243035" and songid.Value ~= "rbxassetid://556122490" and songid.Value ~= "rbxassetid://6431602336" and songid.Value ~= "rbxassetid://5703266925" and songid.Value ~= "rbxassetid://5106599506" and songid.Value ~= "rbxassetid://6190635423" and songid.Value ~= "rbxassetid://4185475912" and songid.Value ~= "rbxassetid://5315171837" and songid ~= "rbxassetid://5089636816" and songid.Value ~= "rbxassetid://6768783121" and songid.Value ~= "rbxassetid://4835535512" and songid.Value ~= "rbxassetid://5089636816" and songid.Value ~= "rbxassetid://1280010741" and songid.Value ~= "rbxassetid://5355210927" and songid.Value ~="rbxassetid://2581112923" and songid.Value ~= "rbxassetid://262950484" and songid.Value ~= "rbxassetid://481104377" and songid.Value ~= "rbxassetid://2920078671" and songid.Value ~= "rbxassetid://2297862957" and songid.Value ~= "rbxassetid://1338971957" and songid.Value ~= "rbxassetid://5460732000" and songid.Value ~= "rbxassetid://4557673096" and songid.Value ~= "rbxassetid://348832364" and songid.Value ~= "rbxassetid://1143392568" then
 			TauntRemote:FireServer("None",3247404955)
 		elseif songid.Value == "rbxassetid://3247404955" then
 			TauntRemote:FireServer("iNSaNiTY",262950484)
 		elseif songid.Value == "rbxassetid://262950484" then
+			TauntRemote:FireServer("ILord",6049110238)
+		elseif songid.Value == "rbxassetid://6049110238" then
 			TauntRemote:FireServer("Err0r",481104377)
 		elseif songid.Value == "rbxassetid://481104377" then
 			--TauntRemote:FireServer("FAST BOIII",2920078671)
@@ -3378,6 +3380,53 @@ while not stopeverything do
 				GUN.GunAdditions.Transparency = 0
 				GUN.NeonParts.Transparency = 0
 			end
+		elseif taunt.Value == "ILord" then
+			RootJoint.C1 = Clerp(RootJoint.C1,ROOTC0,.2/3)
+			Neck.C1 = Clerp(Neck.C1,CFrame.new(0,-.5,0) * CFrame.Angles(math.rad(-90),math.rad(0),math.rad(180)),.2/3)
+			RightHip.C1 = Clerp(RightHip.C1,CFrame.new(.5,1,0,-4.37113918e-08,0,1,0,1,0,-1,0,-4.37113918e-08),1)
+			LeftHip.C1 = Clerp(LeftHip.C1,CFrame.new(-.5,1,0,-4.37113918e-08,-0,-1,0,1,-0,1,0,-4.37113918e-08),1)
+			RightShoulder.C1 = Clerp(RightShoulder.C1,CFrame.new(-.5,.5,0,0,0,1,0,1,-0,-1,0,0),1)
+			LeftShoulder.C1 = Clerp(LeftShoulder.C1,CFrame.new(.5,.499975681,0,0,0,-1,0,1,0,1,0,0),1)
+			if not attack then
+				if Torsovelocity < sensitivity then
+					Humanoid.HipHeight = 2.3
+					Anim = "Idle"
+					RootJoint.C0 = Clerp(RootJoint.C0,ROOTC0*CFrame.new(0,0,-.5*math.sin(sine/25))*CFrame.Angles(math.rad(20),0,0),.25)
+					if NeckSnap then
+						Neck.C0 = Clerp(Neck.C0,NECKC0*CFrame.Angles(math.rad(20),math.rad(10*math.sin(sine/50)),0),1)
+						NeckSnap = false
+					else
+						Neck.C0 = Clerp(Neck.C0,NECKC0*CFrame.Angles(math.rad(20),math.rad(10*math.sin(sine/50)),0),.25)
+					end
+					if math.random(1,60) == 1 then
+						Neck.C0 = Clerp(Neck.C0,NECKC0*CFrame.Angles(math.rad(20+math.random(-20,20)),math.rad((10*math.sin(sine/50))+math.random(-20,20)),math.rad(math.random(-20,20))),1)
+					end
+					RightShoulder.C0 = Clerp(RightShoulder.C0,CFrame.new(1.5,.5,0)*CFrame.Angles(math.rad(-10),0,0)*RIGHTSHOULDERC0,.25)
+					LeftShoulder.C0 = Clerp(LeftShoulder.C0,CFrame.new(-1.5,.5,0)*CFrame.Angles(math.rad(20),0,math.rad(-10-10*math.cos(sine/25)))*LEFTSHOULDERC0,.25)
+					RightHip.C0 = Clerp(RightHip.C0,CFrame.new(1,-1,0)*CFrame.Angles(math.rad(10),math.rad(80),math.rad(10+10*math.cos(sine/25))),.25)
+					LeftHip.C0 = Clerp(LeftHip.C0,CFrame.new(-1,-1,0)*CFrame.Angles(math.rad(20),math.rad(-80),math.rad(-10-10*math.cos(sine/25))),.25)
+				elseif Torsovelocity >= sensitivity then
+					Humanoid.HipHeight = 2.3
+					Anim = "Walk"
+					RootJoint.C0 = Clerp(RootJoint.C0,ROOTC0*CFrame.new(0,0,-.5*math.sin(sine/25))*CFrame.Angles(math.rad(20),0,0),.25)
+					if NeckSnap then
+						Neck.C0 = Clerp(Neck.C0,NECKC0,1)
+						NeckSnap = false
+					else
+						Neck.C0 = Clerp(Neck.C0,NECKC0,.25)
+					end
+					if math.random(1,60) == 1 then
+						Neck.C0 = Clerp(Neck.C0,NECKC0*CFrame.Angles(math.rad(math.random(-20,20)),math.rad(math.random(-20,20)),math.rad(math.random(-20,20))),1)
+					end
+					RightShoulder.C0 = Clerp(RightShoulder.C0,CFrame.new(1.5,.5,0)*CFrame.Angles(math.rad(-10),0,0)*RIGHTSHOULDERC0,.25)
+					LeftShoulder.C0 = Clerp(LeftShoulder.C0,CFrame.new(-1.5,.5,0)*CFrame.Angles(math.rad(20),0,math.rad(-10-10*math.cos(sine/25)))*LEFTSHOULDERC0,.25)
+					RightHip.C0 = Clerp(RightHip.C0,CFrame.new(1,-1,0)*CFrame.Angles(math.rad(-20),math.rad(80),math.rad(10+10*math.cos(sine/25))),.25)
+					LeftHip.C0 = Clerp(LeftHip.C0,CFrame.new(-1,-1,0)*CFrame.Angles(math.rad(-10),math.rad(-80),math.rad(-10-10*math.cos(sine/25))),.25)
+				end
+				GUN.Base.Transparency = 0
+				GUN.GunAdditions.Transparency = 0
+				GUN.NeonParts.Transparency = 0
+			end
 		elseif taunt.Value == "kArmA" then
 			RootJoint.C1 = Clerp(RootJoint.C1,ROOTC0,.2/3)
 			Neck.C1 = Clerp(Neck.C1,CFrame.new(0,-.5,0) * CFrame.Angles(math.rad(-90),math.rad(0),math.rad(180)),.2/3)
@@ -3533,7 +3582,6 @@ while not stopeverything do
 			elseif taunt.Value == "nulled" then			
 				change = 1
 				LOOPx = LOOPx + 5
-				Animation_Speed=3
 				RootJoint.C0 = Clerp(RootJoint.C0,ROOTC0 * CF(-0.25 * COS(LOOPx / 50), 0, -0.5 - 0.5 * COS(LOOPx / 25)) * ANGLES(RAD(0), RAD(0), RAD(45 * SIN(LOOPx / 50))) * ANGLES(RAD(45 + 22.5 * COS(LOOPx / 25)), RAD(0), RAD(0)), 2 / Animation_Speed)
 				Neck.C0 = Clerp(Neck.C0, NECKC0 * CF(0, 0, 0 + ((1) - 1)) * ANGLES(RAD(-45 - 22.5 * COS(LOOPx / 25)), RAD(0), RAD(-45 * SIN(LOOPx / 50))), 2 / Animation_Speed)
 				RightShoulder.C0 = Clerp(RightShoulder.C0, CF(1.5, 0.5, 0) * ANGLES(RAD(175+65 * SIN(LOOPx / 25)), RAD(0), RAD(-45 * SIN(LOOPx / 12.5))) * CF(0,-0.5,0) * RIGHTSHOULDERC0, 1 / Animation_Speed)
