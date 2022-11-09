@@ -1,6 +1,6 @@
 -- NETLIB BY 4EYES!!!! GIANT CREDIT TO HIM!!
 -- a little bit edited to not spam console
--- scriptware only (or any executors that support : printuiconsole,warnuiconsole,erroruiconsole
+-- scriptware only (or any executors that support : printuiconsole,warnuiconsole,erroruiconsole)
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local LocalPlayer = Players.LocalPlayer
