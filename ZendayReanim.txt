@@ -461,7 +461,7 @@ do -- [[ Set Character States ]] --
 					v.Parent = nil
 				end
 			else
-				RealRig.Humanoid:ChangeState(15)
+				--RealRig.Humanoid:ChangeState(15)
 				if Global.Headless then
 					RealRig.Head:Destroy()
 				else
@@ -474,7 +474,7 @@ do -- [[ Set Character States ]] --
 			end
 		end)
 	end
-	RealRig.Humanoid:ChangeState(16)
+	--RealRig.Humanoid:ChangeState(16)
 	FakeRig.Humanoid.DisplayDistanceType = Enum.HumanoidDisplayDistanceType.None
 	workspace.CurrentCamera.CameraSubject = FakeRig.Humanoid
 	task.spawn(function()
@@ -1340,7 +1340,7 @@ do -- [[ Respawn Events ]] --
 		FakeRig = nil
 	end))
 end
-
+--its raining tacos!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 Notify("Netted in " .. string.sub(tostring(tick()-SpeedTest),1,string.find(tostring(tick()-SpeedTest),".")+5),3)
 Notify(Ping:GetValue() < 50 and "Ping is ".. math.round(Ping:GetValue()) .. "ms, most likely stable" or
 	Ping:GetValue() < 100 and "Ping is " .. math.round(Ping:GetValue()) .. "ms, might jitter but stable" or
