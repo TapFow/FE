@@ -1,7 +1,8 @@
-local Effect = tostring(_G.Effect) or "Rainbow" ---// "Rainbow" , "White_Shine" , "Shine"
+---// rahh, i told you NOT to look, smh.
+local Effect = tostring(_G.Effect) or "Rainbow"
 
 --// this is ONLY for "White_Shine"
-local Red, Green, Blue = 224 , 50 , 50 --// if you are using "Shine", make sure Green + 100 or Blue + 100 isnt superior than 255
+local Red, Green, Blue = tonumber(_G.Red) or 224 , tonumber(_G.Green) or 50 , tonumber(_G.Blue) or 50
 local StartRGB = Color3.fromRGB(Red, Green, Blue)
 
 --// this is ONLY for "Shine"
